@@ -14,6 +14,7 @@ public class DataMediator : Mediator {
     //定义控件
     private Text TxtLevel;
     private Button BtnDisplayLevelNum;
+    
 
     public DataMediator(GameObject goRootNode)
     {
@@ -58,4 +59,5 @@ public class DataMediator : Mediator {
                 break;
         }
     }
+    
 }

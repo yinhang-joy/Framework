@@ -22,4 +22,5 @@ public class AppFacade : Facade {
         //模型层注册
         RegisterProxy(new DataProxy());
     }
+    
 }

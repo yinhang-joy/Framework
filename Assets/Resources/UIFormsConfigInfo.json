@@ -1,0 +1,21 @@
+﻿{
+  "ConfigInfo": [
+    { "Key": "本配置文件说明" },
+
+    {
+      "Key": "GameGuideUI",
+      "Value": "UIPrefabs\\GameGuideUI"
+    },
+
+    {
+      "Key": "GamePlayingUI",
+      "Value": "UIPrefabs\\GamePlayingUI"
+    },
+
+    {
+      "Key": "StartUI",
+      "Value": "UIPrefabs\\StartUI"
+    }
+
+  ]
+}

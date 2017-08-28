@@ -32,4 +32,5 @@ public class DataProxy : Proxy {
         //把变化了的数据，发送给“视图层”
         SendNotification("Msg_AddLevel", _MyData);
     }
+    
 }
