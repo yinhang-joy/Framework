@@ -7,7 +7,7 @@ public class PlayerControl : MonoBehaviour {
     public float UpPower=3;
     //2D刚体
     private Rigidbody2D rigibody2D;
-    //触角原始位置
+    //主角原始位置
     private Vector2 _VecStartPosition;
     //游戏是否开始
     private bool _IsGameStart;
@@ -36,12 +36,13 @@ public class PlayerControl : MonoBehaviour {
     public void StartGame()
     {
         _IsGameStart = true;
+        this.transform.eulerAngles = Vector2.zero;
+        this.transform.position = _VecStartPosition;
         this.rigibody2D.isKinematic = false;
     }
     public void StopGame()
     {
         _IsGameStart = false;
-        this.transform.position = _VecStartPosition;
         DisableRigibody2D();
     }
     //游戏结束
@@ -50,6 +51,7 @@ public class PlayerControl : MonoBehaviour {
     /// </summary>
     private void DisableRigibody2D()
     {
+        rigibody2D.velocity = Vector3.zero;
         rigibody2D.isKinematic = true;
     }
 }

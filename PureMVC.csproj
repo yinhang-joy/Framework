@@ -90,6 +90,8 @@
     <Compile Include="Assets\Scripts\Control\Component\PipeMovingControl.cs" />
     <Compile Include="Assets\Scripts\Control\Component\PlayerControl.cs" />
     <Compile Include="Assets\Scripts\Control\Ctrl_EndGameCommond.cs" />
+    <Compile Include="Assets\Scripts\Control\Ctrl_GetTimer.cs" />
+    <Compile Include="Assets\Scripts\Control\Ctrl_Golds.cs" />
     <Compile Include="Assets\Scripts\Control\Ctrl_RegStartGameCommond.cs" />
     <Compile Include="Assets\Scripts\Control\Ctrl_RigistModelAndViewCommond.cs" />
     <Compile Include="Assets\Scripts\Control\Ctrl_StartGameCommond.cs" />

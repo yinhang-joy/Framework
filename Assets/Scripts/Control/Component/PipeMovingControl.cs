@@ -11,7 +11,6 @@ public class PipeMovingControl : MonoBehaviour {
     void Start()
     {
         VecStartPosition = this.transform.position;
-        StartGame();
     }
     public void StartGame()
     {
@@ -33,7 +32,7 @@ public class PipeMovingControl : MonoBehaviour {
         if (IsStartGame)
         {
             //管道组循环移动
-            if (this.transform.position.x < -3)
+            if (this.transform.position.x < -6)
             {
                 transform.position = VecStartPosition;
             }
