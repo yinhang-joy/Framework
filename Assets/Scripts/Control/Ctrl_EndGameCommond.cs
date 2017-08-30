@@ -22,8 +22,7 @@ public class Ctrl_EndGameCommond : SimpleCommand {
         GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerControl>().StopGame();
         UnityHelper.FindTheChildNode(GameObject.Find("MainGameScene"), "PipeGroup").gameObject.GetComponent<PipeMovingControl>().EndGame();
         GameObject.Find("MainGameScene").GetComponent<Ctrl_GetTimer>().StopGame();
-        GameObject.Find("MainGameScene").GetComponent<Ctrl_Golds>().StopGame();
-
+        //GameObject.Find("MainGameScene").GetComponent<Ctrl_Golds>().StopGame();
     }
     private void CloseCurrentUI()
     {

@@ -11,4 +11,5 @@ public class Ctrl_StartGameCommond : MacroCommand
         AddSubCommand(typeof(Ctrl_RigistModelAndViewCommond));
         AddSubCommand(typeof(Ctrl_RegStartGameCommond));
     }
+    
 }

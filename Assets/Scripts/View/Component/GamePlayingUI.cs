@@ -23,4 +23,5 @@ public class GamePlayingUI : BaseUIForm
         MAXScore.text = gameData.MaxScore.ToString();
         CurScore.text = gameData.Score.ToString();
     }
+    
 }

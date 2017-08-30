@@ -19,6 +19,5 @@ public class ApplicationFacade : Facade {
         UnityHelper.FindTheChildNode(goRoot, "PipeGroup").gameObject.AddComponent<PipeMovingControl>();
         GameObject.FindGameObjectWithTag("Player").AddComponent<PlayerControl>();
         goRoot.AddComponent<Ctrl_GetTimer>();
-        goRoot.AddComponent<Ctrl_Golds>();
     }
 }

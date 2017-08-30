@@ -14,6 +14,6 @@ public class Ctrl_RegStartGameCommond : SimpleCommand
         GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerControl>().StartGame();
         UnityHelper.FindTheChildNode(GameObject.Find("MainGameScene"), "PipeGroup").GetComponent<PipeMovingControl>().StartGame();
         GameObject.Find("MainGameScene").GetComponent<Ctrl_GetTimer>().StartGame();
-        GameObject.Find("MainGameScene").GetComponent<Ctrl_Golds>().StartGame();
+        //GameObject.Find("MainGameScene").GetComponent<Ctrl_Golds>().StartGame();
     }
 }
