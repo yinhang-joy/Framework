@@ -145,6 +145,7 @@
     <Compile Include="Assets\Scripts\View\Component\GamePlayingUI.cs" />
     <Compile Include="Assets\Scripts\View\Component\StartUI.cs" />
     <Compile Include="Assets\Scripts\View\View_GamPlayingMediator.cs" />
+    <Compile Include="Assets\Test.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\flappybird\atlas.txt" />

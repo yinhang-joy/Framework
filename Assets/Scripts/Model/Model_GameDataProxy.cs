@@ -39,5 +39,4 @@ public class Model_GameDataProxy : Proxy {
             PlayerPrefs.SetInt("MaxScore", GameData.Score);
         }
     }
-
 }
