@@ -13,17 +13,20 @@ public class Model_GameDataProxy : Proxy {
         GameData.MaxScore = PlayerPrefs.GetInt("MaxScore");
         SendNotification("Msg_DisplayGameInfo", GameData);
     }
+
     public void AddGameTime()
     {
         ++GameData.GameTime;
         SendNotification("Msg_DisplayGameInfo", GameData);
     }
+
     public void AddScore()
     {
         ++GameData.Score;
         GetMaxScore();
         SendNotification("Msg_DisplayGameInfo", GameData);
     }
+
     public int GetMaxScore()
     {
         if (GameData.Score> GameData.MaxScore)
@@ -32,6 +35,7 @@ public class Model_GameDataProxy : Proxy {
         }
         return GameData.MaxScore;
     }
+
     public void SetMaxScore()
     {
         if (GameData.Score > PlayerPrefs.GetInt("MaxScore"))
