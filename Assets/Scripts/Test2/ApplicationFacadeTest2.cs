@@ -16,7 +16,7 @@ public class ApplicationFacadeTest2 : Facade {
                 {
                     if (m_instance == null)
                     {
-                        m_instance = new ApplicationFacade();
+                        m_instance = new ApplicationFacadeTest2();
                     }
                 }
             }
@@ -31,10 +31,13 @@ public class ApplicationFacadeTest2 : Facade {
     }
     protected override void InitializeModel()
     {
-        RegisterProxy( new UserProxy());
+        base.InitializeModel();
+        RegisterProxy(new UserProxy());
     }
     protected override void InitializeView()
     {
         base.InitializeView();
+        RegisterMediator(new UserFormMediator());
+        RegisterMediator(new UserListMedirto());
     }
 }

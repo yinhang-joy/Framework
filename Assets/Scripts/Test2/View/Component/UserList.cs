@@ -31,11 +31,13 @@ public class UserList : MonoBehaviour {
         ClearItems();
         for (int i = 0; i < userList.Count; i++)
         {
+
             UserListItem userItem = Instantiate(UserListItemPrefab);
-            userItem.transform.parent = GridInfo.transform;
+            userItem.transform.SetParent(GridInfo.GetComponent<RectTransform>());
             userItem.transform.localEulerAngles = Vector3.zero;
             userItem.transform.localPosition = Vector3.zero;
             userItem.transform.localScale = Vector3.one;
+            userItem.GetComponent<Toggle>().group = GridInfo.GetComponent<ToggleGroup>();
             userItem.SetUserListItemInfo(userList[i]);
             UserItemList.Add(userItem);
         }
@@ -44,7 +46,7 @@ public class UserList : MonoBehaviour {
     {
         for (int i = 0; i < UserItemList.Count; i++)
         {
-            Destroy(UserItemList[i]);
+            Destroy(UserItemList[i].gameObject);
         }
         UserItemList.Clear();
     }

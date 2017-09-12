@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
     
-public class Test : MonoBehaviour {
+public class Test1 : MonoBehaviour {
 
     public float fSpeed = 3;
     public Vector3 vecTarget;

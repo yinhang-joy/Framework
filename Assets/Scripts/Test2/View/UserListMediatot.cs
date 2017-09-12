@@ -8,7 +8,6 @@ public class UserListMedirto : Mediator {
 
     public new const string NAME = "UserListMedirto";
     private UserProxy userProxy;
-    private UserVO _CurrentSelectUserRecord;
     public UserList userList
     {
         get
@@ -28,7 +27,10 @@ public class UserListMedirto : Mediator {
 
     public void InitUserList(UserList userlist)
     {
-        if (userList == null) return;
+        if (userlist == null)
+        {
+            return;
+        }
         base.m_mediatorName = NAME;
         base.ViewComponent = userlist;
         userList.ShowUserListInfo(userProxy.Users);
@@ -50,7 +52,7 @@ public class UserListMedirto : Mediator {
     {
         switch (notification.Name)
         {
-            case Test2Const.Com_InitMediator:
+            case Test2Const.Msg_InitUserListMediator:
                 UserList userlist = notification.Body as UserList;
                 InitUserList(userlist);
                 break;
@@ -76,7 +78,7 @@ public class UserListMedirto : Mediator {
     {
         if (user!=null)
         {
-            _CurrentSelectUserRecord = user;
+            userProxy._CurrentSelectUserRecord = user;
             SendNotification(Test2Const.Msg_SelUserInfoByUserListMedToUserFormMed, user);
         }
     }
@@ -85,10 +87,11 @@ public class UserListMedirto : Mediator {
     /// </summary>
     void HandleDeleteUser()
     {
-        if (_CurrentSelectUserRecord!=null)
+        if (userProxy._CurrentSelectUserRecord != null)
         {
             SendNotification(Test2Const.Msg_ClearUserInfo);
-            userProxy.RemoveUserItem(_CurrentSelectUserRecord);
+            userProxy.RemoveUserItem(userProxy._CurrentSelectUserRecord);
+            userProxy._CurrentSelectUserRecord = null;
             userList.ShowUserListInfo(userProxy.Users);
         }
     }
@@ -98,6 +101,7 @@ public class UserListMedirto : Mediator {
     /// </summary>
     void HandleAddUser()
     {
+        userProxy._CurrentSelectUserRecord = null;
         SendNotification(Test2Const.Msg_ClearUserInfo);
     }
     /// <summary>
@@ -108,8 +112,9 @@ public class UserListMedirto : Mediator {
     {
         if (user!=null)
         {
+            Debug.Log("?");
             userProxy.UpdateUserItem(user);
-            SendNotification(Test2Const.Msg_SelUserInfoByUserListMedToUserFormMed,user);
+            userList.ShowUserListInfo(userProxy.Users);
         }
     }/// <summary>
     /// 用户添加完成时UserList修改
@@ -118,7 +123,7 @@ public class UserListMedirto : Mediator {
     {
         if (user!=null)
         {
-            userProxy.Users.Add(user);
+            userProxy.AddUserItem(user);
             userList.ShowUserListInfo(userProxy.Users);
         }
     }

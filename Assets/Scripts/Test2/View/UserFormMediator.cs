@@ -19,7 +19,7 @@ public class UserFormMediator : Mediator {
 
     public new const string NAME = "UserFormMediator";
     private UserProxy userProxy;
-    private UserFromType userFromType;
+    private UserFromType userFromType= UserFromType.Create;
     public UserForm userForm
     {
         get{
@@ -56,6 +56,15 @@ public class UserFormMediator : Mediator {
                 UserForm userform = notification.Body as UserForm;
                 InitUserFormMediator(userform);
                 break;
+            case Test2Const.Msg_ClearUserInfo:
+                userFromType = UserFromType.Create;
+                userForm.CleanForm();
+                break;
+            case Test2Const.Msg_SelUserInfoByUserListMedToUserFormMed:
+                userFromType = UserFromType.Update;
+                UserVO user = notification.Body as UserVO;
+                userForm.SetUserFormInfo(user);
+                break;
         }
     }
     void BtnConfirmActionClick()
@@ -69,4 +78,5 @@ public class UserFormMediator : Mediator {
             SendNotification(Test2Const.Msg_UpdateUserInfoToUserListMed,userForm._UserVO);
         }
     }
+    
 }

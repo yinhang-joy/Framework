@@ -4,6 +4,7 @@ using UnityEngine;
 using SUIFW;
 using UnityEngine.UI;
 using System;
+using PureMVC.Patterns;
 
 public class UserForm : MonoBehaviour {
     private InputField Item_FirstName;
@@ -77,10 +78,7 @@ public class UserForm : MonoBehaviour {
     /// <returns></returns>
     private bool CheckUserInfoIsStandard()
     {
-        if (_UserVO == null)
-        {
-            _UserVO = new UserVO();
-        }
+        _UserVO = new UserVO();
         //获取数据 
         _UserVO.FirstName = Item_FirstName.text;
         _UserVO.LastName = Item_LastName.text;
@@ -103,6 +101,7 @@ public class UserForm : MonoBehaviour {
 
         return false;
     }
+
     // Update is called once per frame
     void Update () {
 		

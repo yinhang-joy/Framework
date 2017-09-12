@@ -84,6 +84,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\ScorllView\TestMain.cs" />
+    <Compile Include="Assets\ScorllView\UIWarpContent.cs" />
+    <Compile Include="Assets\ScorllView\UIWarpContentItem.cs" />
     <Compile Include="Assets\Scripts\Frameworks\SUIFW\BaseUIForm.cs" />
     <Compile Include="Assets\Scripts\Frameworks\SUIFW\Config\ConfigManagerByJson.cs" />
     <Compile Include="Assets\Scripts\Frameworks\SUIFW\Config\IConfigManager.cs" />
@@ -96,7 +99,7 @@
     <Compile Include="Assets\Scripts\Frameworks\SUIFW\Helps\UnityHelper.cs" />
     <Compile Include="Assets\Scripts\Frameworks\SUIFW\Localization\LauguageMgr.cs" />
     <Compile Include="Assets\Scripts\Frameworks\SUIFW\Log\Log.cs" />
-    <Compile Include="Assets\Scripts\Frameworks\SUIFW\Test\Test.cs" />
+    <Compile Include="Assets\Scripts\Frameworks\SUIFW\Test\TestUI.cs" />
     <Compile Include="Assets\Scripts\Frameworks\SUIFW\UIManager.cs" />
     <Compile Include="Assets\Scripts\Frameworks\SUIFW\UIType.cs" />
     <Compile Include="Assets\Scripts\PureMVC\Core\Controller.cs" />
@@ -154,9 +157,10 @@
     <Compile Include="Assets\Scripts\Test2\View\Component\UserForm.cs" />
     <Compile Include="Assets\Scripts\Test2\View\Component\UserList.cs" />
     <Compile Include="Assets\Scripts\Test2\View\Component\UserListItem.cs" />
+    <Compile Include="Assets\Scripts\Test2\View\EmployeeInfo.cs" />
     <Compile Include="Assets\Scripts\Test2\View\UserFormMediator.cs" />
     <Compile Include="Assets\Scripts\Test2\View\UserListMediatot.cs" />
-    <Compile Include="Assets\Test.cs" />
+    <Compile Include="Assets\Test1.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\flappybird\atlas.txt" />

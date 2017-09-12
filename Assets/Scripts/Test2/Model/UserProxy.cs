@@ -6,6 +6,7 @@ using UnityEngine;
 public class UserProxy : Proxy {
 
     public new const string NAME = "UserProxy";
+    public UserVO _CurrentSelectUserRecord;
     public List<UserVO> Users
     {
         get { return base.Data as List<UserVO>; }
@@ -33,11 +34,11 @@ public class UserProxy : Proxy {
     /// <param name="user"></param>
     public void UpdateUserItem(UserVO user)
     {
-        if (Users!=null)
+        if (Users != null)
         {
             for (int i = 0; i < Users.Count; i++)
             {
-                if (Users[i].Equals(user))
+                if (Users[i].Equals(_CurrentSelectUserRecord))
                 {
                     Users[i] = user;
                     return;
