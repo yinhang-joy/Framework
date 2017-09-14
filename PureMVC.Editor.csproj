@@ -5,16 +5,16 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{B049F311-98A6-858B-770B-D127964CA974}</ProjectGuid>
+    <ProjectGuid>{E4E865D6-3FAD-B2D0-C272-91B8605A3FFA}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
+    <TargetFrameworkProfile>Unity Full v3.5</TargetFrameworkProfile>
     <CompilerResponseFile></CompilerResponseFile>
-    <UnityProjectType>Game:1</UnityProjectType>
+    <UnityProjectType>Editor:5</UnityProjectType>
     <UnityBuildTarget>Android:13</UnityBuildTarget>
     <UnityVersion>5.6.1f1</UnityVersion>
     <RootNamespace></RootNamespace>
@@ -52,11 +52,26 @@
     <Reference Include="UnityEngine">
       <HintPath>Library\UnityAssemblies\UnityEngine.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Advertisements">
+      <HintPath>Library\UnityAssemblies\UnityEditor.Advertisements.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEditor.UI">
+      <HintPath>Library\UnityAssemblies\UnityEditor.UI.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.Networking">
       <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Networking">
+      <HintPath>Library\UnityAssemblies\UnityEditor.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.TestRunner">
+      <HintPath>Library\UnityAssemblies\UnityEditor.TestRunner.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.TestRunner">
       <HintPath>Library\UnityAssemblies\UnityEngine.TestRunner.dll</HintPath>
@@ -64,17 +79,44 @@
     <Reference Include="nunit.framework">
       <HintPath>Library\UnityAssemblies\nunit.framework.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEditor.TreeEditor">
+      <HintPath>Library\UnityAssemblies\UnityEditor.TreeEditor.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.Analytics">
       <HintPath>Library\UnityAssemblies\UnityEngine.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Analytics">
+      <HintPath>Library\UnityAssemblies\UnityEditor.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.HoloLens">
+      <HintPath>Library\UnityAssemblies\UnityEditor.HoloLens.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.HoloLens">
       <HintPath>Library\UnityAssemblies\UnityEngine.HoloLens.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEditor.Purchasing">
+      <HintPath>Library\UnityAssemblies\UnityEditor.Purchasing.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.VR">
+      <HintPath>Library\UnityAssemblies\UnityEditor.VR.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.VR">
       <HintPath>Library\UnityAssemblies\UnityEngine.VR.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEditor">
-      <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
+    <Reference Include="UnityEditor.Graphs">
+      <HintPath>Library\UnityAssemblies\UnityEditor.Graphs.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Android.Extensions">
+      <HintPath>Library\UnityAssemblies\UnityEditor.Android.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions">
+      <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.WindowsStandalone.Extensions">
+      <HintPath>Library\UnityAssemblies\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
+      <HintPath>Library\UnityAssemblies\SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -84,91 +126,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Guide\Script\Base\CSharpSingletion.cs" />
-    <Compile Include="Assets\Guide\Script\Base\EventTriggerListener.cs" />
-    <Compile Include="Assets\Guide\Script\Base\MonoSingletion.cs" />
-    <Compile Include="Assets\Guide\Script\GuideManager.cs" />
-    <Compile Include="Assets\Guide\Script\MakeGuide.cs" />
-    <Compile Include="Assets\Guide\Script\UI\Canvas1.cs" />
-    <Compile Include="Assets\Guide\Script\UI\Panel1.cs" />
-    <Compile Include="Assets\Guide\Script\UI\Panel2.cs" />
-    <Compile Include="Assets\Guide\Script\UIManager1.cs" />
-    <Compile Include="Assets\ScorllView\TestMain.cs" />
-    <Compile Include="Assets\ScorllView\UIWarpContent.cs" />
-    <Compile Include="Assets\ScorllView\UIWarpContentItem.cs" />
-    <Compile Include="Assets\Scripts\Frameworks\SUIFW\BaseUIForm.cs" />
-    <Compile Include="Assets\Scripts\Frameworks\SUIFW\Config\ConfigManagerByJson.cs" />
-    <Compile Include="Assets\Scripts\Frameworks\SUIFW\Config\IConfigManager.cs" />
-    <Compile Include="Assets\Scripts\Frameworks\SUIFW\Config\SysDefine.cs" />
-    <Compile Include="Assets\Scripts\Frameworks\SUIFW\EventAndMessage\MessageCenter.cs" />
-    <Compile Include="Assets\Scripts\Frameworks\SUIFW\Exception\JsonAnlysisException.cs" />
-    <Compile Include="Assets\Scripts\Frameworks\SUIFW\Helps\ResourcesMgr.cs" />
-    <Compile Include="Assets\Scripts\Frameworks\SUIFW\Helps\UIMaskMgr.cs" />
-    <Compile Include="Assets\Scripts\Frameworks\SUIFW\Helps\UnityHelper.cs" />
-    <Compile Include="Assets\Scripts\Frameworks\SUIFW\Localization\LauguageMgr.cs" />
-    <Compile Include="Assets\Scripts\Frameworks\SUIFW\Log\Log.cs" />
-    <Compile Include="Assets\Scripts\Frameworks\SUIFW\Test\TestUI.cs" />
-    <Compile Include="Assets\Scripts\Frameworks\SUIFW\UIManager.cs" />
-    <Compile Include="Assets\Scripts\Frameworks\SUIFW\UIType.cs" />
-    <Compile Include="Assets\Scripts\PureMVC\Core\Controller.cs" />
-    <Compile Include="Assets\Scripts\PureMVC\Core\Model.cs" />
-    <Compile Include="Assets\Scripts\PureMVC\Core\View.cs" />
-    <Compile Include="Assets\Scripts\PureMVC\Interfaces\ICommand.cs" />
-    <Compile Include="Assets\Scripts\PureMVC\Interfaces\IController.cs" />
-    <Compile Include="Assets\Scripts\PureMVC\Interfaces\IFacade.cs" />
-    <Compile Include="Assets\Scripts\PureMVC\Interfaces\IMediator.cs" />
-    <Compile Include="Assets\Scripts\PureMVC\Interfaces\IModel.cs" />
-    <Compile Include="Assets\Scripts\PureMVC\Interfaces\INotification.cs" />
-    <Compile Include="Assets\Scripts\PureMVC\Interfaces\INotifier.cs" />
-    <Compile Include="Assets\Scripts\PureMVC\Interfaces\IObserver.cs" />
-    <Compile Include="Assets\Scripts\PureMVC\Interfaces\IProxy.cs" />
-    <Compile Include="Assets\Scripts\PureMVC\Interfaces\IView.cs" />
-    <Compile Include="Assets\Scripts\PureMVC\Patterns\Command\MacroCommand.cs" />
-    <Compile Include="Assets\Scripts\PureMVC\Patterns\Command\SimpleCommand.cs" />
-    <Compile Include="Assets\Scripts\PureMVC\Patterns\Facade\Facade.cs" />
-    <Compile Include="Assets\Scripts\PureMVC\Patterns\Mediator\Mediator.cs" />
-    <Compile Include="Assets\Scripts\PureMVC\Patterns\Observer\Notification.cs" />
-    <Compile Include="Assets\Scripts\PureMVC\Patterns\Observer\Notifier.cs" />
-    <Compile Include="Assets\Scripts\PureMVC\Patterns\Observer\Observer.cs" />
-    <Compile Include="Assets\Scripts\PureMVC\Patterns\Proxy\Proxy.cs" />
-    <Compile Include="Assets\Scripts\Test\AppFacade.cs" />
-    <Compile Include="Assets\Scripts\Test\DataCommand.cs" />
-    <Compile Include="Assets\Scripts\Test\DataMediator.cs" />
-    <Compile Include="Assets\Scripts\Test\DataProxy.cs" />
-    <Compile Include="Assets\Scripts\Test\MyData.cs" />
-    <Compile Include="Assets\Scripts\Test\StartGame.cs" />
-    <Compile Include="Assets\Scripts\Test1\ApplicationFacade.cs" />
-    <Compile Include="Assets\Scripts\Test1\Control\Component\LandMovingControl.cs" />
-    <Compile Include="Assets\Scripts\Test1\Control\Component\PipeControl.cs" />
-    <Compile Include="Assets\Scripts\Test1\Control\Component\PipeMovingControl.cs" />
-    <Compile Include="Assets\Scripts\Test1\Control\Component\PlayerControl.cs" />
-    <Compile Include="Assets\Scripts\Test1\Control\Ctrl_EndGameCommond.cs" />
-    <Compile Include="Assets\Scripts\Test1\Control\Ctrl_GetTimer.cs" />
-    <Compile Include="Assets\Scripts\Test1\Control\Ctrl_Golds.cs" />
-    <Compile Include="Assets\Scripts\Test1\Control\Ctrl_RegStartGameCommond.cs" />
-    <Compile Include="Assets\Scripts\Test1\Control\Ctrl_RigistModelAndViewCommond.cs" />
-    <Compile Include="Assets\Scripts\Test1\Control\Ctrl_StartGameCommond.cs" />
-    <Compile Include="Assets\Scripts\Test1\FlappyBirdStart.cs" />
-    <Compile Include="Assets\Scripts\Test1\Model\Test1\Model_GameData.cs" />
-    <Compile Include="Assets\Scripts\Test1\Model\Test1\Model_GameDataProxy.cs" />
-    <Compile Include="Assets\Scripts\Test1\ProjectConst.cs" />
-    <Compile Include="Assets\Scripts\Test1\View\Component\GameGuideUI.cs" />
-    <Compile Include="Assets\Scripts\Test1\View\Component\GamePlayingUI.cs" />
-    <Compile Include="Assets\Scripts\Test1\View\Component\StartUI.cs" />
-    <Compile Include="Assets\Scripts\Test1\View\View_GamPlayingMediator.cs" />
-    <Compile Include="Assets\Scripts\Test2\ApplicationFacadeTest2.cs" />
-    <Compile Include="Assets\Scripts\Test2\Control\StartupApplication.cs" />
-    <Compile Include="Assets\Scripts\Test2\Model\UserProxy.cs" />
-    <Compile Include="Assets\Scripts\Test2\Model\UserVO.cs" />
-    <Compile Include="Assets\Scripts\Test2\Test2Const.cs" />
-    <Compile Include="Assets\Scripts\Test2\Test2Start.cs" />
-    <Compile Include="Assets\Scripts\Test2\View\Component\UserForm.cs" />
-    <Compile Include="Assets\Scripts\Test2\View\Component\UserList.cs" />
-    <Compile Include="Assets\Scripts\Test2\View\Component\UserListItem.cs" />
-    <Compile Include="Assets\Scripts\Test2\View\EmployeeInfo.cs" />
-    <Compile Include="Assets\Scripts\Test2\View\UserFormMediator.cs" />
-    <Compile Include="Assets\Scripts\Test2\View\UserListMediatot.cs" />
-    <Compile Include="Assets\Test1.cs" />
+    <ProjectReference Include="PureMVC.csproj">
+      <Project>{B049F311-98A6-858B-770B-D127964CA974}</Project>
+      <Name>PureMVC</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\Guide\Editor\MakeGuideEditor.cs" />
+    <Compile Include="Assets\Guide\Editor\MakeGuideEditorWindow.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\flappybird\atlas.txt" />

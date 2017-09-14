@@ -97,13 +97,13 @@ namespace SUIFW
         /// </summary>
         /// <param name="buttonName">按钮节点名称</param>
         /// <param name="delHandle">委托：需要注册的方法</param>
-	    protected void RigisterButtonObjectEvent(string buttonName,EventTriggerListener.VoidDelegate  delHandle)
+	    protected void RigisterButtonObjectEvent(string buttonName,EventTriggerListener.UIDelegate delHandle)
 	    {
             GameObject goButton = UnityHelper.FindTheChildNode(this.gameObject, buttonName).gameObject;
             //给按钮注册事件方法
             if (goButton != null)
             {
-                EventTriggerListener.Get(goButton).onClick = delHandle;
+                EventTriggerListener.GetListener(goButton).onPointerClick += delHandle;
             }	    
         }
 
