@@ -2,6 +2,7 @@
 using System.Collections;
 using UnityEngine.UI;
 using System;
+using SUIFW;
 
 public class GuideManager : MonoSingletion<GuideManager> {
 
@@ -11,10 +12,11 @@ public class GuideManager : MonoSingletion<GuideManager> {
     private string nowCsvFile;
     private int nowIndex;
     private bool isFinish = false;//是否完成所有的新手引导
-    private string[] nameArray;    
-
+    private string[] nameArray;
+    private GameObject _canvas;
     public void Init()
     {
+        _canvas = GameObject.FindGameObjectWithTag(SysDefine.SYS_TAG_CANVAS);
         //读取进度
         string content = Resources.Load<TextAsset>(fileDir + "GuideProgress").ToString();
         string[] temp = content.Split(',');
@@ -88,16 +90,17 @@ public class GuideManager : MonoSingletion<GuideManager> {
     IEnumerator FindUI(string name)
     {
         //寻找目标
-        GameObject go = UIManager1.Instance.Find(name);
+        GameObject go = UnityHelper.FindTheChildNode(_canvas, name).gameObject;
         while(go == null)
         {
             yield return new WaitForSeconds(0.1f);
             Debug.Log("wait");
-            go = UIManager1.Instance.Find(name);
+            go = UnityHelper.FindTheChildNode(_canvas, name).gameObject;
         }
        
         //高亮
-        maskTra = UIManager1.Instance.Show("Mask").transform;
+        maskTra = UnityHelper.FindTheChildNode(_canvas, "_UIMaskPanel").transform;
+        maskTra.gameObject.SetActive(true);
         maskTra.SetAsLastSibling();
         Canvas canvas = go.AddComponent<Canvas>();
         canvas.overrideSorting = true;

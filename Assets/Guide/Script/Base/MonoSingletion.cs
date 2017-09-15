@@ -14,7 +14,11 @@ public abstract class MonoSingletion<T> : MonoBehaviour where T : MonoBehaviour 
             if (monoSingletionRoot == null)
             {
                 monoSingletionRoot = GameObject.Find(rootName);
-                if (monoSingletionRoot == null) Debug.Log("please create a gameobject named " + rootName);
+                if (monoSingletionRoot == null)
+                {
+                    monoSingletionRoot = new GameObject("MonoSingletionRoot");
+                    monoSingletionRoot.AddComponent<T>();
+                }
             }
             if (instance == null)
             {

@@ -13,9 +13,16 @@
     },
 
     {
-      "Key": "StartUI",
-      "Value": "UIPrefabs\\StartUI"
+      "Key": "MainUIPanel",
+      "Value": "MainUIPanel"
+    },
+    {
+      "Key": "BagPanel",
+      "Value": "BagPanel"
+    },
+     {
+      "Key": "EquipPanel",
+      "Value": "EquipPanel"
     }
-
   ]
 }

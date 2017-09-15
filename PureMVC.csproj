@@ -88,10 +88,11 @@
     <Compile Include="Assets\Guide\Script\Base\EventTriggerListener.cs" />
     <Compile Include="Assets\Guide\Script\Base\MonoSingletion.cs" />
     <Compile Include="Assets\Guide\Script\GuideManager.cs" />
+    <Compile Include="Assets\Guide\Script\GuideStart.cs" />
     <Compile Include="Assets\Guide\Script\MakeGuide.cs" />
-    <Compile Include="Assets\Guide\Script\UI\Canvas1.cs" />
-    <Compile Include="Assets\Guide\Script\UI\Panel1.cs" />
-    <Compile Include="Assets\Guide\Script\UI\Panel2.cs" />
+    <Compile Include="Assets\Guide\Script\UI\BagPanel.cs" />
+    <Compile Include="Assets\Guide\Script\UI\EquipPanel.cs" />
+    <Compile Include="Assets\Guide\Script\UI\MainUIPanel.cs" />
     <Compile Include="Assets\Guide\Script\UIManager1.cs" />
     <Compile Include="Assets\ScorllView\TestMain.cs" />
     <Compile Include="Assets\ScorllView\UIWarpContent.cs" />

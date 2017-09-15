@@ -1,12 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
+using SUIFW;
 
-public class Panel2 : MonoBehaviour {
+public class BagPanel : BaseUIForm {
 
 	void Start () 
     {
         EventTriggerListener.GetListener(transform.Find("Button").gameObject).onPointerClick +=
-            (go) => { gameObject.SetActive(false); };
+            (go) => { CloseUIForm() ; };
         EventTriggerListener.GetListener(transform.Find("Button (1)").gameObject).onPointerClick +=
             (go) => { Debug.Log("整理"); };
 	}

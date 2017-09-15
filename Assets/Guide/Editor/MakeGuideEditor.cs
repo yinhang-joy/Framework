@@ -4,7 +4,7 @@ using UnityEditor;
 using System.Collections.Generic;
 using System.IO;
 
-//[CustomEditor(typeof(MakeGuide))]
+[CustomEditor(typeof(MakeGuide))]
 [ExecuteInEditMode] 
 public class MakeGuideEditor : Editor {
 
