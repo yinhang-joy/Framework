@@ -12,7 +12,7 @@ public class TestMain : MonoBehaviour {
         //{
 
         //    listItem.Add(new Item("测试:" + UnityEngine.Random.Range(1, 1000)));
-        //    warpContent.AddItem(count++);
+        //    warpContent.AddItem(listItem.Count-1);
         //}
     }
     

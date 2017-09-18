@@ -6,8 +6,8 @@ using UnityEngine.UI;
 /**
  * @des:滚动列表优化 
  * @注:
- * 1.基于NGUI UIGrid 布局排列
- * 2.基于NGUI UIWarpContent的ScrollRect内的item进行优化
+ * 1.基于UGUI  布局排列
+ * 2.UIWarpContent的ScrollRect内的item进行优化
 */
 [DisallowMultipleComponent]
 public class UIWarpContent : MonoBehaviour {
@@ -78,9 +78,13 @@ public class UIWarpContent : MonoBehaviour {
     /// 当前行数
     /// </summary>
 	private int curScrollPerLineIndex = -1;
-
+    /// <summary>
+    /// 显示item集合
+    /// </summary>
 	private List<UIWarpContentItem> listItem;
-
+    /// <summary>
+    /// 没有被使用的item集合，相当于缓存池
+    /// </summary>
 	private Queue<UIWarpContentItem> unUseItem;
 
 
@@ -102,7 +106,7 @@ public class UIWarpContent : MonoBehaviour {
 		setDataCount (dataCount);
         
 		scrollRect.onValueChanged.RemoveAllListeners();//先移除所有滑动监听
-		scrollRect.onValueChanged.AddListener (onValueChanged);
+		scrollRect.onValueChanged.AddListener (onValueChanged);//添加滑动监听
 
 		unUseItem.Clear ();
 		listItem.Clear ();
@@ -166,8 +170,8 @@ public class UIWarpContent : MonoBehaviour {
 			if (index < startDataIndex || index >= endDataIndex) 
 			{
 				item.Index = -1;
-				listItem.Remove (item);
-				unUseItem.Enqueue (item);
+				listItem.Remove (item);//从显示集合移除
+				unUseItem.Enqueue (item);//入没有使用队列
 			}
 		}
 
@@ -192,7 +196,9 @@ public class UIWarpContent : MonoBehaviour {
     /// <param name="dataIndex"></param>
     public void AddItem(int dataIndex)
 	{
-		if (dataIndex<0 || dataIndex > dataCount)
+        print("dataIndex" + dataIndex + "datacount" + dataCount);
+
+        if (dataIndex<0 || dataIndex > dataCount)
 		{
 			return;
 		}
@@ -200,23 +206,23 @@ public class UIWarpContent : MonoBehaviour {
 		bool isNeedAdd = false;
 		for (int i = listItem.Count-1; i>=0 ; i--) {
 			UIWarpContentItem item = listItem [i];
-			if (item.Index >= (dataCount - 1)) {
+			if (item.Index >= (dataCount - 1)) {//已经显示的下标是最后一个数据或倒数第二个数据，就需要添加
 				isNeedAdd = true;
 				break;
 			}
 		}
-		setDataCount (dataCount+1);
+		setDataCount (dataCount+1);//重新设置item总量
                                                         
 		if (isNeedAdd) {
 			for (int i = 0; i < listItem.Count; i++) {
 				UIWarpContentItem item = listItem [i];
 				int oldIndex = item.Index;
-				if (oldIndex>=dataIndex) {
+				if (oldIndex>=dataIndex) {//如果已显示的item索引大于等于添加的索引就增加一个index
 					item.Index = oldIndex+1;
 				}
 				item = null;
 			}
-			setUpdateRectItem (getCurScrollPerLineIndex());
+			setUpdateRectItem (getCurScrollPerLineIndex());//设置显示
 		} else {
 			//重新刷新数据
 			for (int i = 0; i < listItem.Count; i++) {
@@ -224,6 +230,7 @@ public class UIWarpContent : MonoBehaviour {
 				int oldIndex = item.Index;
 				if (oldIndex>=dataIndex) {
 					item.Index = oldIndex;
+                    Debug.Log(item.gameObject.name + item.Index);
 				}
 				item = null;
 			}
