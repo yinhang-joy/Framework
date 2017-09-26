@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using PureMVC.Interfaces;
+using SUIFW;
 /// <summary>
 /// 视图展示
 /// 功能：属于“视图层”显示玩家ui页面
@@ -23,6 +24,7 @@ public class DataMediator : Mediator {
         BtnDisplayLevelNum = goRootNode.transform.Find("BtnCount").GetComponent<Button>();
         BtnDisplayLevelNum.onClick.AddListener(OnClickAddLevel);
     }
+   
     /// <summary>
     /// 定义一个点击事件
     /// </summary>

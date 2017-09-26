@@ -4,14 +4,18 @@
 
     {
       "Key": "GameGuideUI",
-      "Value": "UIPrefabs\\GameGuideUI"
+      "Value": "UIPrefabs\\PureMVCforBirdie\\GameGuideUI"
     },
 
     {
       "Key": "GamePlayingUI",
-      "Value": "UIPrefabs\\GamePlayingUI"
+      "Value": "UIPrefabs\\PureMVCforBirdie\\GamePlayingUI"
     },
 
+       {
+      "Key": "StartUI",
+      "Value": "UIPrefabs\\PureMVCforBirdie\\StartUI"
+    },
     {
       "Key": "MainUIPanel",
       "Value": "MainUIPanel"
