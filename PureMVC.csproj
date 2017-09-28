@@ -155,20 +155,20 @@
     <Compile Include="Assets\Scripts\PureMVCforTest\DataProxy.cs" />
     <Compile Include="Assets\Scripts\PureMVCforTest\MyData.cs" />
     <Compile Include="Assets\Scripts\PureMVCforTest\StartGame.cs" />
-    <Compile Include="Assets\Scripts\UIFrameworks\SUIFW\BaseUIForm.cs" />
-    <Compile Include="Assets\Scripts\UIFrameworks\SUIFW\Config\ConfigManagerByJson.cs" />
-    <Compile Include="Assets\Scripts\UIFrameworks\SUIFW\Config\IConfigManager.cs" />
-    <Compile Include="Assets\Scripts\UIFrameworks\SUIFW\Config\SysDefine.cs" />
-    <Compile Include="Assets\Scripts\UIFrameworks\SUIFW\EventAndMessage\MessageCenter.cs" />
-    <Compile Include="Assets\Scripts\UIFrameworks\SUIFW\Exception\JsonAnlysisException.cs" />
-    <Compile Include="Assets\Scripts\UIFrameworks\SUIFW\Helps\ResourcesMgr.cs" />
-    <Compile Include="Assets\Scripts\UIFrameworks\SUIFW\Helps\UIMaskMgr.cs" />
-    <Compile Include="Assets\Scripts\UIFrameworks\SUIFW\Helps\UnityHelper.cs" />
-    <Compile Include="Assets\Scripts\UIFrameworks\SUIFW\Localization\LauguageMgr.cs" />
-    <Compile Include="Assets\Scripts\UIFrameworks\SUIFW\Log\Log.cs" />
-    <Compile Include="Assets\Scripts\UIFrameworks\SUIFW\Test\TestUI.cs" />
-    <Compile Include="Assets\Scripts\UIFrameworks\SUIFW\UIManager.cs" />
-    <Compile Include="Assets\Scripts\UIFrameworks\SUIFW\UIType.cs" />
+    <Compile Include="Assets\Scripts\UIFW\SUIFW\BaseUIForm.cs" />
+    <Compile Include="Assets\Scripts\UIFW\SUIFW\Config\ConfigManagerByJson.cs" />
+    <Compile Include="Assets\Scripts\UIFW\SUIFW\Config\IConfigManager.cs" />
+    <Compile Include="Assets\Scripts\UIFW\SUIFW\Config\SysDefine.cs" />
+    <Compile Include="Assets\Scripts\UIFW\SUIFW\EventAndMessage\MessageCenter.cs" />
+    <Compile Include="Assets\Scripts\UIFW\SUIFW\Exception\JsonAnlysisException.cs" />
+    <Compile Include="Assets\Scripts\UIFW\SUIFW\Helps\ResourcesMgr.cs" />
+    <Compile Include="Assets\Scripts\UIFW\SUIFW\Helps\UIMaskMgr.cs" />
+    <Compile Include="Assets\Scripts\UIFW\SUIFW\Helps\UnityHelper.cs" />
+    <Compile Include="Assets\Scripts\UIFW\SUIFW\Localization\LauguageMgr.cs" />
+    <Compile Include="Assets\Scripts\UIFW\SUIFW\Log\Log.cs" />
+    <Compile Include="Assets\Scripts\UIFW\SUIFW\Test\TestUI.cs" />
+    <Compile Include="Assets\Scripts\UIFW\SUIFW\UIManager.cs" />
+    <Compile Include="Assets\Scripts\UIFW\SUIFW\UIType.cs" />
     <Compile Include="Assets\Test1.cs" />
   </ItemGroup>
   <ItemGroup>
